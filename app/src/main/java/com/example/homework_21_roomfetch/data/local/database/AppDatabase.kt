@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.example.homework_21_roomfetch.data.local.dao.ClothesDao
 import com.example.homework_21_roomfetch.data.local.entity.ClothesEntity
 
-@Database(entities = [ClothesEntity::class], version = 1, exportSchema = false)
+@Database(entities = [ClothesEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun clothesDao(): ClothesDao
 }

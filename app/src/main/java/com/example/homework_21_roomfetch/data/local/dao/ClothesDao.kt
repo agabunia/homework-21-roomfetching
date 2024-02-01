@@ -17,7 +17,4 @@ interface ClothesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(clothes: List<ClothesEntity>)
 
-    @Delete
-    suspend fun delete(clothes: List<ClothesEntity>)
-
 }
