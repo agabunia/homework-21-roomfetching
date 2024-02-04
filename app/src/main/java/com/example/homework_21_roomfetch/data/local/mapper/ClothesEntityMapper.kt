@@ -9,7 +9,8 @@ fun ClothesEntity.toDomain(): GetClothes {
         cover = cover,
         price = price,
         title = title,
-        favorite = favorite
+        favorite = favorite,
+        category = category
     )
 }
 

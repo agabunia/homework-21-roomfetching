@@ -6,6 +6,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface ClothesService {
-    @GET("https://run.mocky.io/v3/1775d634-92dc-4c32-ae71-1707b8cfee41")
+    @GET("https://run.mocky.io/v3/df8d4951-2757-45aa-8f60-bf1592a090ce")
     suspend fun getClothes(): Response<List<ClothesDto>>
 }

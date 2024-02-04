@@ -9,7 +9,8 @@ fun GetClothes.toPresenter(): Clothes {
         cover = cover,
         price = price,
         title = title,
-        favorite = favorite
+        favorite = favorite,
+        category = category
     )
 }
 
@@ -19,6 +20,7 @@ fun Clothes.toPresenter(): GetClothes {
         cover = cover,
         price = price,
         title = title,
-        favorite = favorite
+        favorite = favorite,
+        category = category
     )
 }

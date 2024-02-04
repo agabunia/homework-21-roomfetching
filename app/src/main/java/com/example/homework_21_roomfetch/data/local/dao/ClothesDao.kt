@@ -14,6 +14,9 @@ interface ClothesDao {
     @Query("SELECT * FROM clothesentity")
     fun getAll(): Flow<List<ClothesEntity>>
 
+    @Query("SELECT DISTINCT category FROM clothesentity WHERE category IS NOT NULL")
+    fun getAllCategory(): Flow<List<String>>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(clothes: List<ClothesEntity>)
 

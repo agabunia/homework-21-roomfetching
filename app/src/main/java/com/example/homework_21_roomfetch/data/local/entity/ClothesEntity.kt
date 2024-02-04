@@ -10,5 +10,6 @@ data class ClothesEntity(
     @ColumnInfo(name = "cover") val cover: String,
     @ColumnInfo(name = "price") val price: String,
     @ColumnInfo(name = "title") val title: String,
-    @ColumnInfo(name = "favorite") var favorite: Boolean
+    @ColumnInfo(name = "favorite") var favorite: Boolean,
+    @ColumnInfo(name = "category") var category: String? = null
 )

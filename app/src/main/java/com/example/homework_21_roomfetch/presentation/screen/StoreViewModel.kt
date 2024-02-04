@@ -3,6 +3,7 @@ package com.example.homework_21_roomfetch.presentation.screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.homework_21_roomfetch.data.common.Resource
+import com.example.homework_21_roomfetch.domain.repository.CategoryRepository
 import com.example.homework_21_roomfetch.domain.repository.ClothesWrapperRepository
 import com.example.homework_21_roomfetch.presentation.event.StoreEvent
 import com.example.homework_21_roomfetch.presentation.mapper.toPresenter
@@ -16,7 +17,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class StoreViewModel @Inject constructor(
-    private val repository: ClothesWrapperRepository
+    private val repository: ClothesWrapperRepository,
+    private val categoryRepository: CategoryRepository
 ) : ViewModel() {
 
     private val _storeState = MutableStateFlow(StoreState())
@@ -25,6 +27,7 @@ class StoreViewModel @Inject constructor(
     fun onEvent(event: StoreEvent) {
         when (event) {
             is StoreEvent.FetchClothes -> fetchClothes()
+            is StoreEvent.FetchCategory -> fetchCategory()
         }
     }
 
@@ -46,6 +49,14 @@ class StoreViewModel @Inject constructor(
                         _storeState.value = StoreState(isLoading = networkResult.loading)
                     }
                 }
+            }
+        }
+    }
+
+    private fun fetchCategory() {
+        viewModelScope.launch {
+            categoryRepository.getCategory().collect{
+                _storeState.value = StoreState(categories = it)
             }
         }
     }

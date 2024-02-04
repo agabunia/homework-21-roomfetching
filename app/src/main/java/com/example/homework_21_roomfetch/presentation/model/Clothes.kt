@@ -5,5 +5,6 @@ data class Clothes(
     val cover: String,
     var price: String,
     val title: String,
-    var favorite: Boolean
+    var favorite: Boolean,
+    val category: String?
 )

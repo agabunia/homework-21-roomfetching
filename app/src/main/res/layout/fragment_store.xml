@@ -4,11 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_green"
+    android:orientation="vertical"
     tools:context=".presentation.screen.StoreFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:clipToPadding="false"
+        android:paddingStart="35dp"
+        android:paddingEnd="0dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvClothes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

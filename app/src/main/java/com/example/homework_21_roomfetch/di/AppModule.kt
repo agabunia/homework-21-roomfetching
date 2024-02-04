@@ -59,7 +59,9 @@ object AppModule {
         return Room.databaseBuilder(
             context,
             AppDatabase::class.java, "clothes_database"
-        ).build()
+        )
+            .addMigrations(AppDatabase.MIGRATION_1_2)
+            .build()
     }
 
     @Singleton

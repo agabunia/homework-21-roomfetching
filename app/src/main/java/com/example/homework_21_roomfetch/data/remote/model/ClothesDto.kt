@@ -12,5 +12,7 @@ data class ClothesDto(
     @Json(name = "title")
     val title: String,
     @Json(name = "favorite")
-    var favorite: Boolean
+    var favorite: Boolean,
+    @Json(name = "category")
+    var category: String
 )

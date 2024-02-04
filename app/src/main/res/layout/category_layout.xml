@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="52dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/button_shape_unclicked"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/font_color"
+        android:textSize="14sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
